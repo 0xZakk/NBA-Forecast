@@ -1,44 +1,61 @@
-##Forecasting the 2015 All-NBA teams
-Data mining techniques used to forecast who will be voted onto the 2015 All-NBA basketball teams.
+# Forecasting the 2015 All-NBA teams
 
+Data mining techniques used to forecast who will be voted onto the 2015 All-NBA
+basketball teams.
 
-##Intro:
-At the end of every NBA season teams, players and coaches are recognized for the performance through the NBA season. 
-Outside of the 12 annual awards given at the end of year, players' are anointed  to All pro teams(All NBA, All Rookie and All Defensive Teams) on the basis of their individual performance.
-Its an honor bestowed to the "Best players in their respective positions. Three-five man teams are voted on by sportswriters and broadcasters across North America.
+## Intro
 
-Player receive five points for the first team, three points for the second team, and one point for the third.
-The five players with the highest total scores make the first team, then next five and so forth. 
+At the end of every NBA season teams, players and coaches are recognized for the
+performance through the NBA season.  Outside of the 12 annual awards given at
+the end of year, players' are anointed  to All pro teams(All NBA, All Rookie and
+All Defensive Teams) on the basis of their individual performance.  Its an honor
+bestowed to the "Best players in their respective positions. Three-five man
+teams are voted on by sportswriters and broadcasters across North America.
 
-To my knowledge, I don’t believe there is some methodology to the way voters vote for players to receive honors.
-All the award is supposed to reflect the best players in their respective positions, this is not always true. Sometimes voters, vote on players by merit, not on individual performance or how one players performance helped their team. 
+Player receive five points for the first team, three points for the second team,
+and one point for the third.  The five players with the highest total scores
+make the first team, then next five and so forth.
 
-Notes: 
-Ties are possible(but has only happen once)
-From 1946 - 1955, players were selected without regard to position.  However starting in 1956, each team consisted of two forwards, one center and two guards. 
+To my knowledge, I don’t believe there is some methodology to the way voters
+vote for players to receive honors.  All the award is supposed to reflect the
+best players in their respective positions, this is not always true. Sometimes
+voters, vote on players by merit, not on individual performance or how one
+players performance helped their team.
 
-##Data Mining Meets Basketball:
-###Problem
+Notes:
 
-Given the availability of historical basketball data, can we predict which players will be voted into each team by the end of the 2014-15 season? 
-	
+* Ties are possible(but has only happen once)
+* From 1946 - 1955, players were selected without regard to position. However
+  starting in 1956, each team consisted of two forwards, one center and two
+  guards.
+
+## Data Mining Meets Basketball
+
+### Problem
+
+Given the availability of historical basketball data, can we predict which
+players will be voted into each team by the end of the 2014-15 season?
+
 Hypothesis statement:
-		Null: there isn’t a relationship between the NBA statistics and whether or not an NBA player is voted onto the All-NBA team. 
-		Alternative: There is a relationship between statistical performance and making the team.
-	
-### Data:
-*Description of your data set and how it was obtained:
+
+* Null: there isn’t a relationship between the NBA statistics and whether or not an NBA player is voted onto the All-NBA team.
+* Alternative: There is a relationship between statistical performance and making the team.
+
+### Data
+
+Description of your data set and how it was obtained:
 
 NBA Stats for every player who played in the NBA from 1950 - 2015
 
-Each variable is the accumulated average for that particular stat in a given season.  
+Each variable is the accumulated average for that particular stat in a given
+season.
 
 |column_name|name|legend_name|table_name|
 | ----------|:-----:|:-------------:| -----:|
 |player|Player|PLAYER|Per Game Player Stats|
 |pos|Position|POS|Per Game Player Stats|
 |age|Age|AGE|Per Game Player Stats
-|bref_team_id|Team ID|BREF_TEAM_ID|Per Game Player Stats|	
+|bref_team_id|Team ID|BREF_TEAM_ID|Per Game Player Stats|
 |g|Games Played|G|Per Game Player Stats|
 |gs|Games Started|GS|Per Game Player Stats|
 |mp|Minutes Per Game|MP|Per Game Player Stats|
@@ -82,6 +99,6 @@ Each variable is the accumulated average for that particular stat in a given sea
 |BPM|Box Plus/Minus||Per Game Player Stats|
 |VORP|Value Over Replacement Player||Per Game Player Stats|
 
-**Pulled data from here: https://github.com/abresler/abresler.github.io/tree/master/data/NBA/player_data/all_player_per_game
+Pulled data from here: https://github.com/abresler/abresler.github.io/tree/master/data/NBA/player_data/all_player_per_game
 
 But data is originally scraped from: http://www.basketball-reference.com
